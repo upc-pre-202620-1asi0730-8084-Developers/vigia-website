@@ -349,12 +349,61 @@ window.VIGIA_I18N = {
     'privacy.s7p2': 'If you consider your data protection rights inadequately addressed, you may file a complaint with the National Authority for Personal Data Protection (ANPDP) under MINJUS.',
     'privacy.ctaTitle': 'Do you want to review the terms of service and ethical framework?',
     'privacy.ctaDesc': 'Review our Terms and Conditions of Service and the ACM/IEEE & CIP Codes of Ethics.',
-    'privacy.ctaBtn': 'View Terms and Conditions'
+    'privacy.ctaBtn': 'View Terms and Conditions',
+
+    // Contact / Subscription Form (LP-04 / TS-06)
+    'contact.eyebrow': 'REQUEST SUBSCRIPTION',
+    'contact.title': 'Let us talk about <span class="accent">your operation</span>',
+    'contact.subtitle': 'Leave your company details and the Trazza Labs commercial team will contact you to activate your Vigía plan and configure your first construction sites.',
+    'contact.point1': '✓ Guided onboarding for construction and logistics companies',
+    'contact.point2': '✓ Direct validation through Trazza Labs official channel',
+    'contact.point3': '✓ Commercial response in under 24 business hours',
+    'contact.requiredHint': 'Fields marked with * are required.',
+    'contact.fullNameLabel': 'Full name *',
+    'contact.fullNamePlaceholder': 'e.g. Carlos Mendoza',
+    'contact.companyLabel': 'Company *',
+    'contact.companyPlaceholder': 'e.g. Constructora Andina SAC',
+    'contact.emailLabel': 'Work email *',
+    'contact.emailPlaceholder': 'name@company.pe',
+    'contact.phoneLabel': 'Phone (optional)',
+    'contact.phonePlaceholder': '+51 999 123 456',
+    'contact.segmentLabel': 'Business segment *',
+    'contact.segmentPlaceholder': 'Select a segment',
+    'contact.segmentConstruction': 'Construction or real-estate company',
+    'contact.segmentLogistics': 'Logistics, transport or satellite warehouse',
+    'contact.segmentOther': 'Other industry',
+    'contact.planLabel': 'Plan of interest (optional)',
+    'contact.planPlaceholder': 'No preference yet',
+    'contact.planStarter': 'Starter',
+    'contact.planPro': 'Pro',
+    'contact.planEnterprise': 'Enterprise',
+    'contact.planCustom': 'Custom',
+    'contact.messageLabel': 'Tell us about your needs *',
+    'contact.messagePlaceholder': 'Share the number of sites, warehouses or flow you want to control with Vigía.',
+    'contact.submit': 'Send request <span class="arrow">→</span>',
+    'contact.sending': 'Sending request...',
+    'contact.errRequiredFullName': 'Please enter your full name (at least 2 characters).',
+    'contact.errRequiredCompany': 'Please enter your company name (at least 2 characters).',
+    'contact.errRequiredEmail': 'Please enter a valid work email address.',
+    'contact.errRequiredSegment': 'Please select a business segment.',
+    'contact.errRequiredMessage': 'Please describe your needs (at least 10 characters).',
+    'contact.errValidationSummary': 'Please complete the highlighted required fields before sending.',
+    'contact.errNetwork': 'Could not reach the Vigía service right now. Please try again or email contacto@vigia.pe.',
+    'contact.success': 'Request received (#{id}). Our commercial team will contact you shortly.'
 
   },
   es: {
     // Texts that only appear from script (not written in index.html).
     'header.closeMenu': 'Cerrar menú',
-    'header.backToTop': 'Volver al inicio'
+    'header.backToTop': 'Volver al inicio',
+    'contact.sending': 'Enviando solicitud...',
+    'contact.errRequiredFullName': 'Ingresa tu nombre completo (mínimo 2 caracteres).',
+    'contact.errRequiredCompany': 'Ingresa el nombre de tu empresa (mínimo 2 caracteres).',
+    'contact.errRequiredEmail': 'Ingresa un correo corporativo válido.',
+    'contact.errRequiredSegment': 'Selecciona el segmento de tu empresa.',
+    'contact.errRequiredMessage': 'Cuéntanos tu necesidad (mínimo 10 caracteres).',
+    'contact.errValidationSummary': 'Completa los campos obligatorios marcados antes de enviar tu solicitud.',
+    'contact.errNetwork': 'No fue posible conectar con el servicio de Vigía en este momento. Intenta nuevamente o escríbenos a contacto@vigia.pe.',
+    'contact.success': 'Solicitud recibida (#{id}). Nuestro equipo comercial se comunicará contigo pronto.'
   }
 };

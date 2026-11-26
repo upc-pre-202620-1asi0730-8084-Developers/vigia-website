@@ -373,8 +373,171 @@
     </div>
   </section>
 
+  <!-- ================= CONTACTO / SUSCRIPCIÓN ================= -->
+  <section class="contact-section" id="contacto" aria-labelledby="contactTitle">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow" data-i18n="contact.eyebrow">SOLICITAR SUSCRIPCIÓN</p>
+          <h2 class="section-title" id="contactTitle" data-i18n="contact.title">
+            Conversemos sobre <span class="accent">tu operación</span>
+          </h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">
+            Déjanos los datos de tu empresa y el equipo comercial de Trazza Labs se comunicará
+            contigo para activar tu plan de Vigía y configurar tus primeros frentes de obra.
+          </p>
+          <ul class="contact-highlights">
+            <li data-i18n="contact.point1">✓ Activación guiada para empresas constructoras y logísticas</li>
+            <li data-i18n="contact.point2">✓ Validación directa con el canal oficial de Trazza Labs</li>
+            <li data-i18n="contact.point3">✓ Respuesta comercial en menos de 24 horas hábiles</li>
+          </ul>
+        </div>
+
+        <form
+          id="contactForm"
+          class="contact-form-card"
+          data-api-base="https://vigia-api-8084.northcentralus.cloudapp.azure.com/api/v1"
+          novalidate
+          aria-describedby="contactFormHint"
+        >
+          <p id="contactFormHint" class="contact-form-hint" data-i18n="contact.requiredHint">
+            Los campos marcados con * son obligatorios.
+          </p>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="contactFullName" data-i18n="contact.fullNameLabel">Nombre completo *</label>
+              <input
+                id="contactFullName"
+                name="fullName"
+                type="text"
+                autocomplete="name"
+                required
+                minlength="2"
+                maxlength="120"
+                placeholder="Ej. Carlos Mendoza"
+                data-i18n-placeholder="contact.fullNamePlaceholder"
+                aria-required="true"
+                aria-describedby="contactFullNameError"
+              />
+              <span id="contactFullNameError" class="field-error" role="alert"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="contactCompanyName" data-i18n="contact.companyLabel">Empresa *</label>
+              <input
+                id="contactCompanyName"
+                name="companyName"
+                type="text"
+                autocomplete="organization"
+                required
+                minlength="2"
+                maxlength="160"
+                placeholder="Ej. Constructora Andina SAC"
+                data-i18n-placeholder="contact.companyPlaceholder"
+                aria-required="true"
+                aria-describedby="contactCompanyNameError"
+              />
+              <span id="contactCompanyNameError" class="field-error" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="contactEmail" data-i18n="contact.emailLabel">Correo corporativo *</label>
+              <input
+                id="contactEmail"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                maxlength="180"
+                placeholder="nombre@empresa.pe"
+                data-i18n-placeholder="contact.emailPlaceholder"
+                aria-required="true"
+                aria-describedby="contactEmailError"
+              />
+              <span id="contactEmailError" class="field-error" role="alert"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="contactPhone" data-i18n="contact.phoneLabel">Teléfono (opcional)</label>
+              <input
+                id="contactPhone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                maxlength="40"
+                placeholder="+51 999 123 456"
+                data-i18n-placeholder="contact.phonePlaceholder"
+                aria-describedby="contactPhoneError"
+              />
+              <span id="contactPhoneError" class="field-error" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="contactSegment" data-i18n="contact.segmentLabel">Segmento de empresa *</label>
+              <select
+                id="contactSegment"
+                name="segment"
+                required
+                aria-required="true"
+                aria-describedby="contactSegmentError"
+              >
+                <option value="" data-i18n="contact.segmentPlaceholder">Selecciona un segmento</option>
+                <option value="CONSTRUCTION" data-i18n="contact.segmentConstruction">Empresa constructora o inmobiliaria</option>
+                <option value="LOGISTICS" data-i18n="contact.segmentLogistics">Logística, transporte o almacén satélite</option>
+                <option value="OTHER" data-i18n="contact.segmentOther">Otro sector</option>
+              </select>
+              <span id="contactSegmentError" class="field-error" role="alert"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="contactPlan" data-i18n="contact.planLabel">Plan de interés (opcional)</label>
+              <select id="contactPlan" name="plan" aria-describedby="contactPlanError">
+                <option value="" data-i18n="contact.planPlaceholder">Sin preferencia aún</option>
+                <option value="STARTER" data-i18n="contact.planStarter">Starter</option>
+                <option value="PRO" data-i18n="contact.planPro">Pro</option>
+                <option value="ENTERPRISE" data-i18n="contact.planEnterprise">Enterprise</option>
+                <option value="CUSTOM" data-i18n="contact.planCustom">A medida</option>
+              </select>
+              <span id="contactPlanError" class="field-error" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="contactMessage" data-i18n="contact.messageLabel">Cuéntanos tu necesidad *</label>
+            <textarea
+              id="contactMessage"
+              name="message"
+              rows="4"
+              required
+              minlength="10"
+              maxlength="1500"
+              placeholder="Indica número de obras, almacenes o flujo que deseas controlar con Vigía."
+              data-i18n-placeholder="contact.messagePlaceholder"
+              aria-required="true"
+              aria-describedby="contactMessageError"
+            ></textarea>
+            <span id="contactMessageError" class="field-error" role="alert"></span>
+          </div>
+
+          <div id="contactFormStatus" class="contact-status" role="status" aria-live="polite" hidden></div>
+
+          <div class="contact-actions">
+            <button type="submit" id="contactSubmitBtn" class="btn btn-primary" data-i18n="contact.submit">
+              Enviar solicitud <span class="arrow">→</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= FOOTER ================= -->
-  <footer class="site-footer" id="contacto">
+  <footer class="site-footer" id="footer-contacto">
     <span class="deco deco-footer" aria-hidden="true"></span>
     <div class="container footer-inner">
       <div class="footer-brand">
